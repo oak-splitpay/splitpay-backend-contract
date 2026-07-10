@@ -1,6 +1,17 @@
 # Splitpay Backend 
 
+**Stellar Drip Wave Submission**
+
 Backend API for Splitpay - a Stellar-based bill splitting application. Manages split sessions, payment tracking, and settlement coordination.
+
+## Drip Wave Submission Details
+
+### Product Scope
+Splitpay Backend serves as the indexing and tracking API for the Splitpay ecosystem. It tracks real-time settlement status of Soroban contract payments via the Stellar Horizon API, facilitating seamless peer-to-peer bill splitting on-chain.
+
+### Migration Plan
+Splitpay is being built natively on Stellar to capitalize on the robust functionality of Soroban smart contracts, reducing costs for micro-transactions while offering near-instant settlement.
+
 
 ## Architecture
 

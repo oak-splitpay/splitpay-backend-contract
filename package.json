@@ -9,7 +9,7 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["splitpay", "stellar", "blockchain"],
+  "keywords": ["splitpay", "stellar", "blockchain", "soroban", "drip-wave"],
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
