@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [ Main, main ]
+  pull_request:
+    branches: [ Main, main ]
+
+jobs:
+  contracts:
+    name: Soroban Smart Contract Tests & WASM Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Run Cargo Tests
+        run: cargo test --manifest-path contracts/Cargo.toml --verbose
+
+      - name: Build Contract WASM
+        run: cargo build --manifest-path contracts/Cargo.toml --target wasm32-unknown-unknown --release
+
+  backend:
+    name: NestJS Backend API Build & Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: TypeScript Typecheck
+        run: npm run typecheck
+
+      - name: Build NestJS API
+        run: npm run build

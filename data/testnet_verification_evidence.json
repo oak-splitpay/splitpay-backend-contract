@@ -1,0 +1,33 @@
+{
+  "repository": "oak-splitpay/splitpay-backend-contract",
+  "frontend_integration": "oak-splitpay/splitpay-frontend",
+  "verified_at": "2026-10-13T15:03:43.033Z",
+  "network": "Stellar Testnet",
+  "split_details": {
+    "split_id": "1791903815791",
+    "total_amount_xlm": "100.0000000",
+    "per_person_xlm": "50.0000000",
+    "total_participants": 2,
+    "memo": "SPLIT:1791903815791"
+  },
+  "accounts": {
+    "organizer": "GD667KTLEPMJ4MLRIH23SWKHIFFZBWPTSODN5RFPCCWNJ6RHJG7OXF4M",
+    "participant_1": "GCN74D5M3ORI6N5KHOOZECJJK5CDPPAIMYI33ZQ6CUSVY5NULSH7ALNR",
+    "participant_2": "GBLVLFCD3YIXH2UZMTL5GO5QHG745PAYFYAC3536IPJYWODA5IDALEI6",
+    "receiver": "GCLIQJUZ3GBBFAAC244RGJ3AENPAMF2S2ROU6P5KTPNXBPV3TGJV7QDA"
+  },
+  "transactions": [
+    {
+      "participant": "Participant 1",
+      "amount_xlm": "50.0000000",
+      "hash": "44a7e8b0d1110ae839981e0f2e1de003d4081cc693d9c629c811b36255c56c91",
+      "ledger": 5176047,
+      "explorer_url": "https://stellar.expert/explorer/testnet/tx/44a7e8b0d1110ae839981e0f2e1de003d4081cc693d9c629c811b36255c56c91"
+    }
+  ],
+  "state_verification": {
+    "participant_1_paid": true,
+    "duplicate_payment_prevented": true,
+    "receiver_credited_50_xlm": true
+  }
+}
